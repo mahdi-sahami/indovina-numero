@@ -4,7 +4,7 @@ from choices import UserInputChoices
 game=Game()
 
 print("Welcome to my game!")
-print("in this game, first you have to choose a number from 0 to 100")
+print(f"in this game, first you have to choose a number from {game.lower_limit} to {game.upper_limit}")
 print("then, I start to guess your number, at each time, you just need to tell me whether it's your number, or your number is higher or lower")
 print(f"if I guessed your number, enter: {UserInputChoices.user_number_is_guessed.value}")
 print(f"if your number is higher than my guess, enter: {UserInputChoices.user_number_is_higher.value}")

@@ -8,12 +8,9 @@ class Game(object):
 
     def __init__(self, upper_limit:int=UPPER_LIMIT_DEFAULT, lower_limit:int=LOWER_LIMIT_DEFAULT) -> None:
         """
-        Docstring for __init__
-        
-        :param self: Description
-        :param upper_limit: Description
+        :param upper_limit: upper limit e un range tra il numero che stato indovinato e lutimo numero 101()
         :type upper_limit: int
-        :param lower_limit: Description
+        :param lower_limit: e un range di numeri tra il numero che stato indovinato e  -1()
         :type lower_limit: int
         """
         
@@ -43,12 +40,15 @@ class Game(object):
 
     def modify_in_lower_range(self):
         """
-        Docstring for modify_in_lower_range
-        ....
+        modify_in_lower_range : quando numero selezionato e piu piccolo del quello indovinato il nostro range di numeri sara dal numero indovinato al 0.
         """
         self.upper_limit = self.guessed_number
 
     def modify_in_upper_range(self):
+        """
+        modify_in_upper_range : quando numero selzionato e piu grande dal quello indovinato ol nostro range di numeri sara dal numero indovinato al 100.
+        
+        """
         self.lower_limit = self.guessed_number
 
     def number_is_guessed(self):
